@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "35816913031",
+    "firebase_url": "https://fitterfit-d1f4d.firebaseio.com",
+    "project_id": "fitterfit-d1f4d",
+    "storage_bucket": "fitterfit-d1f4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35816913031:android:826455c452ed8f7918e022",
+        "android_client_info": {
+          "package_name": "com.example.fitter_fit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35816913031-qk7c8uc56jfuvf1hn5m34eq1jl7gd1ig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fitter_fit",
+            "certificate_hash": "fcadab4336ccce8fa7fdbdde8650f5d9b28059f9"
+          }
+        },
+        {
+          "client_id": "35816913031-4ohl3qb7tp2jkn1g08rvu8ek25du6v3b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9n_QfSXjTYRUtvZ3EvFC_N6sl5uGA608"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35816913031-4ohl3qb7tp2jkn1g08rvu8ek25du6v3b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
