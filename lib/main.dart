@@ -3,7 +3,8 @@ import 'package:fitter_fit/Services/clients_management_service.dart';
 import 'package:fitter_fit/Services/firebase_auth_service.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
 import 'package:fitter_fit/Services/invitations_service.dart';
-import 'package:fitter_fit/route_generator.dart';
+import 'package:fitter_fit/Services/schedule_service.dart';
+import 'package:fitter_fit/Navigator/route_generator.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
         ),
         Provider<InvitationsService>(
           create: (_) => InvitationsService(),
+        ),
+        Provider<ScheduleService>(
+          create: (_) => ScheduleService(),
         ),
       ],
       child: MaterialApp(

@@ -1,13 +1,19 @@
 class InvitationEntity {
   String invitationId;
+  String date;
   String clientId;
   String trainerId;
 
-  InvitationEntity({this.invitationId, this.clientId, this.trainerId});
+  InvitationEntity(
+      {this.invitationId, this.date, this.clientId, this.trainerId});
 
   String get getInvitationId => invitationId;
 
   set setInvitationId(String invitationId) => this.invitationId = invitationId;
+
+  String get getDate => date;
+
+  set setDate(String date) => this.date = date;
 
   String get getClientId => clientId;
 

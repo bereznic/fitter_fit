@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitter_fit/Common_Widgets/drawer_widget.dart';
 import 'package:fitter_fit/Common_Widgets/invite_clients_floating_action_button.dart';
-import 'package:fitter_fit/Common_Widgets/remove_client_dialog.dart';
+import 'package:fitter_fit/View/Clients_view/remove_client_dialog.dart';
 import 'package:fitter_fit/Entity/user_entity.dart';
 import 'package:fitter_fit/Services/clients_management_service.dart';
 import 'package:fitter_fit/Services/firebase_auth_service.dart';
@@ -65,39 +65,50 @@ class _ClientsViewState extends State<ClientsView> {
                     builder: (context, snapshot) {
                       UserEntity clientData = snapshot.data;
                       return Container(
-                        height: height(context) * 0.25,
-                        child: Card(
-                          elevation: 5.0,
-                          color: Colors.white,
-                          child: Column(
-                            children: [
-                              Align(
-                                alignment: Alignment.topRight,
-                                child: Container(
-                                  child: FlatButton(
-                                    child: Icon(Icons.delete_outline,
-                                        color: Colors.red),
-                                    onPressed: () {
-                                      showDialog(
-                                        context: context,
-                                        builder: (context) =>
-                                            RemoveClientDialog(
-                                          trainer: trainerData,
-                                          client: clientData,
-                                        ),
-                                      );
-                                    },
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(30.0),
+                        height: height(context) * 0.2,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed("SingleClientView");
+                          },
+                          child: Card(
+                            elevation: 5.0,
+                            color: Colors.white,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    child: FlatButton(
+                                      child: Icon(Icons.delete_outline,
+                                          color: Colors.red),
+                                      onPressed: () {
+                                        showDialog(
+                                          context: context,
+                                          builder: (context) =>
+                                              RemoveClientDialog(
+                                            trainer: trainerData,
+                                            client: clientData,
+                                          ),
+                                        );
+                                      },
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30.0),
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                clientData.name,
-                                // style: TextStyle(color: Colors.lightBlue),
-                              ),
-                            ],
+                                Text(
+                                  clientData.name,
+                                  // style: TextStyle(color: Colors.lightBlue),
+                                ),
+                                Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Icon(Icons.arrow_forward),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       );

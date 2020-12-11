@@ -1,16 +1,8 @@
-// import 'dart:html';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitter_fit/Entity/user_entity.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
 import 'package:fitter_fit/constants.dart';
-
-// @immutable
-// class User {
-//   const User({@required this.uid});
-//   final String uid;
-// }
 
 class FireBaseAuthService {
   final _firebaseAuth = FirebaseAuth.instance;

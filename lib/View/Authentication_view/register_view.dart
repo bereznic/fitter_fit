@@ -61,7 +61,9 @@ class _RegisterViewState extends State<RegisterView> {
                         password: passwordController.text,
                         userType: client,
                       );
-                      await authService.register(userEntity);
+                      authService.register(userEntity).then((value) {
+                        if (value == true) print("success");
+                      });
                     },
                     child: Text("Register"),
                   ),

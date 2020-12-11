@@ -51,6 +51,13 @@ class DrawerWidget extends StatelessWidget {
                       )
                     : Container(),
                 ListTile(
+                  title: Text("Schedule"),
+                  onTap: () {
+                    Navigator.pop(context);
+                    navigateTo(context, 'ScheduleView');
+                  },
+                ),
+                ListTile(
                   title: Text("Invitations"),
                   onTap: () {
                     Navigator.pop(context);

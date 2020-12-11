@@ -47,21 +47,11 @@ class _InviteDialogState extends State<InviteDialog> {
         ),
         FlatButton.icon(
           onPressed: () async {
-            return FutureBuilder(
-              future: invitationsService.sendInvitation(emailController.text),
-              builder: (context, snapshot) {
-                if (snapshot.hasError) {
-                  Navigator.pop(context);
-                  return Text("${snapshot.data}");
-                }
-                if (snapshot.connectionState == ConnectionState.done) {
-                  if (snapshot.data == 'success') Navigator.pop(context);
-                } else {
-                  Navigator.pop(context);
-                  return CircularProgressIndicator();
-                }
-              },
-            );
+            invitationsService
+                .sendInvitation(emailController.text)
+                .then((result) {
+              Navigator.pop(context, result);
+            });
           },
           icon: Icon(Icons.send),
           label: Text("Send"),

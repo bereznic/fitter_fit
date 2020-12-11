@@ -31,6 +31,10 @@ class _InvitationsSentViewState extends State<InvitationsSentView> {
           return Center(
             child: CircularProgressIndicator(),
           );
+        if (snapshot.data.docs.length == 0)
+          return Center(
+            child: Text("No invitations sent."),
+          );
         return new ListView.builder(
             itemCount: snapshot.data.docs.length,
             shrinkWrap: true,
