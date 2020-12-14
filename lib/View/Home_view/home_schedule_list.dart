@@ -24,16 +24,7 @@ class _HomeScheduleListState extends State<HomeScheduleList> {
         if (snapshot.connectionState == ConnectionState.waiting)
           return Text("Waiting for schedule to load.");
         if (snapshot.data.docs.length == 0)
-          return Container(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text("Schedule empty."),
-                ],
-              ),
-            ),
-          );
+          return Center(child: Text("No activities for today."));
         return new ListView.builder(
           itemCount: snapshot.data.docs.length,
           shrinkWrap: true,
@@ -44,6 +35,7 @@ class _HomeScheduleListState extends State<HomeScheduleList> {
                 .toScheduleEntity(activitySnapshot.id, activitySnapshot.data());
             DateTime activityDate = stringToDate(activityEntity.date);
             return Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
                   "${activityDate.hour}:${activityDate.minute}",

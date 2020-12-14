@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fitter_fit/Common_Widgets/cancel_invitation_dialog.dart';
-import 'package:fitter_fit/Entity/invitation_entity.dart';
+// import 'package:fitter_fit/Entity/invitation_entity.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
 import 'package:fitter_fit/Services/invitations_service.dart';
 import 'package:fitter_fit/constants.dart';

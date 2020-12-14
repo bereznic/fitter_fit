@@ -9,6 +9,7 @@ import 'package:fitter_fit/View/Schedule_view/schedule_view.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
+  // ignore: missing_return
   static Route<dynamic> generateRoute(RouteSettings settings) {
     // final String args = settings.arguments;
 

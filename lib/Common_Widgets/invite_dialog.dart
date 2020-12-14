@@ -1,6 +1,6 @@
-import 'package:fitter_fit/Common_Widgets/fail_dialog.dart';
-import 'package:fitter_fit/Common_Widgets/loading_dialog.dart';
-import 'package:fitter_fit/Common_Widgets/success_dialog.dart';
+// import 'package:fitter_fit/Common_Widgets/fail_dialog.dart';
+// import 'package:fitter_fit/Common_Widgets/loading_dialog.dart';
+// import 'package:fitter_fit/Common_Widgets/success_dialog.dart';
 import 'package:fitter_fit/Services/invitations_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fitter_fit/Entity/user_entity.dart';
-import 'package:fitter_fit/Services/firestore_service.dart';
+// import 'package:fitter_fit/Entity/user_entity.dart';
+// import 'package:fitter_fit/Services/firestore_service.dart';
 import 'package:fitter_fit/constants.dart';
 
 class ClientsManagementService {

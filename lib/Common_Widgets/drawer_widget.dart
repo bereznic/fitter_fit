@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitter_fit/Common_Widgets/signout_dialog.dart';
 import 'package:fitter_fit/Entity/user_entity.dart';
-import 'package:fitter_fit/Services/firebase_auth_service.dart';
+// import 'package:fitter_fit/Services/firebase_auth_service.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
 import 'package:fitter_fit/constants.dart';
 import 'package:flutter/material.dart';

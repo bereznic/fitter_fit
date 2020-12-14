@@ -31,15 +31,15 @@ class InvitationsService {
                 return invitationsRefference.add({
                   clientId: _clientData.uid,
                   trainerId: _trainerData.uid
-                }).then((value) => 'success');
+                }).then((value) => success);
               } else
-                return 'invitationSentAlready';
+                return invitationSentAlready;
             });
           } else
-            return 'alreadyClient';
+            return alreadyClient;
         });
       } else
-        return 'userNotFound';
+        return userNotFound;
     });
   }
 

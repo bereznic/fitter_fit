@@ -15,6 +15,11 @@ final String name = "name";
 final String userType = "userType";
 final String clients = "clients";
 
+final String success = 'success';
+final String invitationSentAlready = 'invitationSentAlready';
+final String alreadyClient = 'alreadyClient';
+final String userNotFound = 'userNotFound';
+
 double height(BuildContext context) {
   return MediaQuery.of(context).size.height;
 }

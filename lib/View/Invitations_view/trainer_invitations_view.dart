@@ -1,12 +1,12 @@
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitter_fit/Common_Widgets/drawer_widget.dart';
 import 'package:fitter_fit/Common_Widgets/invite_clients_floating_action_button.dart';
-import 'package:fitter_fit/Services/firebase_auth_service.dart';
+// import 'package:fitter_fit/Services/firebase_auth_service.dart';
 import 'package:fitter_fit/View/Invitations_view/Invitations_sent_view.dart';
 import 'package:fitter_fit/View/Invitations_view/invitations_received_view.dart';
-import 'package:fitter_fit/constants.dart';
+// import 'package:fitter_fit/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+// import 'package:provider/provider.dart';
 
 class TrainerInvitationsView extends StatefulWidget {
   @override
@@ -25,8 +25,8 @@ class _TrainerInvitationsViewState extends State<TrainerInvitationsView> {
 
   @override
   Widget build(BuildContext context) {
-    final authService =
-        Provider.of<FireBaseAuthService>(context, listen: false);
+    // final authService =
+    //     Provider.of<FireBaseAuthService>(context, listen: false);
 
     return Scaffold(
       drawer: DrawerWidget(),
