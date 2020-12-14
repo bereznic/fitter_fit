@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:date_time_picker/date_time_picker.dart';
-import 'package:multiselect_formfield/multiselect_formfield.dart';
 
 class CreateMeetingDialog extends StatefulWidget {
   @override
@@ -28,8 +27,6 @@ class _CreateMeetingDialogState extends State<CreateMeetingDialog> {
     //     Provider.of<ScheduleService>(context, listen: false);
     final fireStoreService =
         Provider.of<FireStoreService>(context, listen: false);
-    final selectedClients =
-        Provider.of<MultiSelectClients>(context, listen: false);
     return AlertDialog(
       scrollable: true,
       title: Text("New activity"),
