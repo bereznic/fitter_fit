@@ -1,6 +1,6 @@
 import 'package:fitter_fit/Entity/user_entity.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
-import 'package:fitter_fit/View/Schedule_view/multi_select_clients_provider.dart';
+import 'package:fitter_fit/Services/Schedule_service/multi_select_clients_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -16,6 +16,8 @@ class _SelectedClientsChipDisplayState
   Widget build(BuildContext context) {
     final fireStoreService =
         Provider.of<FireStoreService>(context, listen: false);
+    final selectedClients =
+        Provider.of<MultiSelectClients>(context, listen: false);
     return Consumer<MultiSelectClients>(builder: (context, client, child) {
       if (client.selectedClients.length > 0)
         return Wrap(

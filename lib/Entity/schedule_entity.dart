@@ -43,8 +43,10 @@ class ScheduleEntity {
     return ScheduleEntity(
       scheduleId: _scheduleId,
       name: _data['name'],
-      guests: List.from(_data['guests']),
       date: _data['date'],
+      owner: _data['owner'],
+      description: _data['description'],
+      guests: List.from(_data['guests']),
     );
   }
 
@@ -53,7 +55,8 @@ class ScheduleEntity {
       'name': scheduleEntity.name,
       'date': scheduleEntity.date,
       'owner': scheduleEntity.owner,
-      'guests': scheduleEntity.guests
+      'guests': scheduleEntity.guests,
+      'description': scheduleEntity.description,
     });
   }
 }

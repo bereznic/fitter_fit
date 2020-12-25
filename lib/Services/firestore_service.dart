@@ -23,9 +23,9 @@ class FireStoreService {
   }
 
   //UPGRADE DE LA CLIENT LA TRAINER
-  Future<void> makeTrainer(UserEntity _user) async {
+  Future<void> makeTrainer(String userId) async {
     await usersRefference
-        .doc(_user.uid)
+        .doc(userId)
         .update({userType: trainer, 'clients': FieldValue.arrayUnion([])});
   }
 

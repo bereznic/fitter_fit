@@ -1,6 +1,6 @@
 import 'package:fitter_fit/Entity/user_entity.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
-import 'package:fitter_fit/View/Schedule_view/multi_select_clients_provider.dart';
+import 'package:fitter_fit/Services/Schedule_service/multi_select_clients_provider.dart';
 import 'package:fitter_fit/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -99,9 +99,18 @@ class _SelectClientsDialogState extends State<SelectClientsDialog> {
                                 });
                           },
                         ),
-                        Flexible(
-                            child: Text(
-                                "${clientData.name}(${clientData.email})")),
+                        GestureDetector(
+                          onTap: () {
+                            if (selectClients.selectedClients
+                                .contains(clientData.uid))
+                              selectClients.deselectClient(clientData.uid);
+                            else
+                              selectClients.selectClient(clientData.uid);
+                          },
+                          child: Flexible(
+                              child: Text(
+                                  "${clientData.name}(${clientData.email})")),
+                        ),
                       ],
                     );
                   },

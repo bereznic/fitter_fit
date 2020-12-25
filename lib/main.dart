@@ -1,11 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
-// import 'package:fitter_fit/Services/clients_management_service.dart';
 import 'package:fitter_fit/Services/firebase_auth_service.dart';
 import 'package:fitter_fit/Services/firestore_service.dart';
 import 'package:fitter_fit/Services/invitations_service.dart';
-import 'package:fitter_fit/Services/schedule_service.dart';
+import 'package:fitter_fit/Services/Schedule_service/schedule_service.dart';
 import 'package:fitter_fit/Navigator/route_generator.dart';
-import 'package:fitter_fit/View/Schedule_view/multi_select_clients_provider.dart';
+import 'package:fitter_fit/Services/Schedule_service/multi_select_clients_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

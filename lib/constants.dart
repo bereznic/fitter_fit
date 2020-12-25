@@ -37,7 +37,7 @@ DateTime stringToDate(String dateTime) {
 }
 
 String dateToString(DateTime dateTime) {
-  return dateTime.toIso8601String();
+  return dateTime.toString();
 }
 
 final currentUserId = FirebaseAuth.instance.currentUser.uid;

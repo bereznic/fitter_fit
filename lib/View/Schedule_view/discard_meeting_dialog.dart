@@ -1,5 +1,4 @@
-// import 'package:fitter_fit/Services/schedule_service.dart';
-import 'package:fitter_fit/View/Schedule_view/multi_select_clients_provider.dart';
+import 'package:fitter_fit/Services/Schedule_service/multi_select_clients_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 // import 'package:provider/provider.dart';

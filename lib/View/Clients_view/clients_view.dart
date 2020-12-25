@@ -29,6 +29,7 @@ class _ClientsViewState extends State<ClientsView> {
       floatingActionButton: inviteClientsFloatingActionButton(context),
       body: SingleChildScrollView(
         child: StreamBuilder(
+          initialData: "Loading...",
           stream: fireStoreService
               .getUserDocument(FirebaseAuth.instance.currentUser.uid),
           builder: (context, snapshot) {
