@@ -61,21 +61,23 @@ class _ScheduleListState extends State<ScheduleList> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Align(
-                                alignment: Alignment.topRight,
-                                child: IconButton(
-                                  icon: Icon(Icons.cancel_outlined),
-                                  color: Colors.red,
-                                  onPressed: () {
-                                    showDialog(
-                                      context: context,
-                                      builder: (_) => RemoveMeetingDialog(
-                                        meeting: activityEntity,
+                              activityEntity.owner == currentUserId
+                                  ? Align(
+                                      alignment: Alignment.topRight,
+                                      child: IconButton(
+                                        icon: Icon(Icons.cancel_outlined),
+                                        color: Colors.red,
+                                        onPressed: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (_) => RemoveMeetingDialog(
+                                              meeting: activityEntity,
+                                            ),
+                                          );
+                                        },
                                       ),
-                                    );
-                                  },
-                                ),
-                              ),
+                                    )
+                                  : Container(),
                               Text(activityEntity.name),
                               FutureBuilder(
                                 future: fireStoreService.getUserDocumentFuture(
@@ -93,22 +95,24 @@ class _ScheduleListState extends State<ScheduleList> {
                                 },
                               ),
                               Text(activityEntity.description),
-                              Align(
-                                  alignment: Alignment.bottomRight,
-                                  child: FlatButton.icon(
-                                    icon: Icon(
-                                      Icons.edit_outlined,
-                                    ),
-                                    label: Text("Edit"),
-                                    onPressed: () {
-                                      showDialog(
-                                        context: context,
-                                        builder: (_) => CreateMeetingDialog(
-                                          meetingEntity: activityEntity,
+                              activityEntity.owner == currentUserId
+                                  ? Align(
+                                      alignment: Alignment.bottomRight,
+                                      child: FlatButton.icon(
+                                        icon: Icon(
+                                          Icons.edit_outlined,
                                         ),
-                                      );
-                                    },
-                                  ))
+                                        label: Text("Edit"),
+                                        onPressed: () {
+                                          showDialog(
+                                            context: context,
+                                            builder: (_) => CreateMeetingDialog(
+                                              meetingEntity: activityEntity,
+                                            ),
+                                          );
+                                        },
+                                      ))
+                                  : Container()
                             ],
                           )),
                     ),

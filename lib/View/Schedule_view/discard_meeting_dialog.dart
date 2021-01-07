@@ -1,7 +1,6 @@
 import 'package:fitter_fit/Services/Schedule_service/multi_select_clients_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-// import 'package:provider/provider.dart';
 
 class DiscardMeetingDialog extends StatefulWidget {
   @override

@@ -79,8 +79,3 @@ class _LoginViewState extends State<LoginView> {
     );
   }
 }
-
-final snackBar = SnackBar(
-  content: Text("Wrong credentials"),
-  backgroundColor: Colors.red,
-);
